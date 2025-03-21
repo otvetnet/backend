@@ -38,5 +38,6 @@ try:
 except Exception as e:
     logger.error(f"Failed to init stream handler: {e}")
 
+
 def get_logger():
     return logger
