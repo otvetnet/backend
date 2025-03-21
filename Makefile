@@ -5,7 +5,7 @@ DB_SERVICE := db
 
 .PHONY: help build up down logs \
 		migrate generate clean \
-        shell-app shell-db status
+        shell-backend shell-db status
 
 help:
 	@echo "Usage:"
