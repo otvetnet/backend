@@ -172,3 +172,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# App
+#   Following folders may contain application
+#   specific files that should be ignored as well.
+logs/
