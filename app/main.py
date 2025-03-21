@@ -7,4 +7,4 @@ app = FastAPI(title=settings.app.name)
 
 @app.get("/")
 async def root():
-    return {"message": f"Welcome to {settings.app_name} backend!"}
+    return {"message": f"Welcome to {settings.app.name} backend!"}
