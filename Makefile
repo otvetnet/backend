@@ -4,7 +4,7 @@ BACKEND_SERVICE := backend
 DB_SERVICE := db
 
 .PHONY: help build up down logs \
-		migrate generate clean \
+		migrate generate clean sync \
         shell-backend shell-db status
 
 help:
@@ -75,3 +75,6 @@ shell-db:
 
 status:
 	docker-compose -f $(COMPOSE_FILE) ps
+
+sync:
+	pip freeze > requirements.txt
