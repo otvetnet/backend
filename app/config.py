@@ -10,17 +10,17 @@ class Application(BaseModel):
 
 class Database(BaseModel):
     scheme: str = "postgresql://"
+    host: str = "db"
     user: str = "user"
     password: str = "pass"
     db_name: str = "db"
     port: int = 5432
-    docker_name: str = "db"
 
     @computed_field
     def url(self) -> str:
         return (
             f"{self.scheme}{self.user}:{self.password}@"
-            f"{self.docker_name}:{self.port}/{self.db_name}"
+            f"{self.host}:{self.port}/{self.db_name}"
         )
 
 
