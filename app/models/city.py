@@ -10,4 +10,6 @@ class City(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String)
     region_id = Column(Integer, ForeignKey("regions.id"))
+
     region = relationship("Region", back_populates="cities")
+    students = relationship("Student", back_populates="city")
